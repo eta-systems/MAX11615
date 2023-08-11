@@ -29,8 +29,8 @@ int main(void)
                     + (internal reference always on)
     MAX11615_Init(&adcDriver_1, &hi2c1, ADDRESS_MAX11615, 4+2+1);
 
-    uint8_t adc_value = 0;
-    MAX11615_ADC_Read(&adcDriver_1, 0, adc_value); 
+    uint16_t adc_value = 0;
+    MAX11615_ADC_Read(&adcDriver_1, 0, &adc_value); 
     // read adc value from channel 0 and print to console
     printf("ADC Value CH0: %d\n", adc_value);
 
